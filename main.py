@@ -15,6 +15,15 @@ x_train, x_test, y_train, y_test = train_test_split(x,y, train_size=0.2, random_
 # print(x_train)
 
 # print(x_train.shape)
+
+x_train_age = x_train.drop(columns =
+                            ['sex','bmi','children','smoker','region','charges']).values
+
+x_test_age = x_test.drop(columns =
+                         ['sex','bmi','children','smoker','region','charges']).values
+
+# print(x_train_age.shape)
+
 from sklearn.preprocessing import OrdinalEncoder
 from sklearn.preprocessing import OneHotEncoder
 from sklearn. compose import ColumnTransformer
